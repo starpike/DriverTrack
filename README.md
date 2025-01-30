@@ -11,6 +11,7 @@
 Open your terminal and run the following commands:
 
 git clone https://github.com/starpike/drivertrack.git
+
 cd drivertrack
 
 ### 2. Install Dependencies
