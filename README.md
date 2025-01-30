@@ -1,8 +1,8 @@
-# Drive Track
+# Driver Track
 
 ## Overview
 
-**Drive Track** is a React-based web application designed to help fleet managers and businesses monitor and analyze driver activities efficiently. The application displays a comprehensive list of drivers, their vehicle registrations, and the days of the week they worked. Additionally, it provides insights into the total duration of activities for the week and breaks down durations by activity type.
+**Driver Track** is a React-based web application designed to help fleet managers and businesses monitor and analyze driver activities efficiently. The application displays a comprehensive list of drivers, their vehicle registrations, and the days of the week they worked. Additionally, it provides insights into the total duration of activities for the week and breaks down durations by activity type.
 
 ## Features
 
