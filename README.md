@@ -10,17 +10,17 @@
 
 Open your terminal and run the following commands:
 
-git clone https://github.com/starpike/drivertrack.git
+  git clone https://github.com/starpike/drivertrack.git
 
-cd drivertrack
+  cd drivertrack
 
 ### 2. Install Dependencies
 
-npm install
+  npm install
 
 ### 3. Run the applications
 
-npm start
+  npm start
 
 ## Features
 
