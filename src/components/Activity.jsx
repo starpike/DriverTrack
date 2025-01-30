@@ -39,14 +39,23 @@ const totalActivityDuration = (traces) => {
 };
 
 const activityTypeDuration = (traces, type) => {
-    return 0;
+  let total = 0;
+
+   traces.forEach((trace) => {
+      total += trace.activity.filter(ac => ac.type === type).reduce((accumulator, ac) => {
+        return accumulator + ac["duration"];
+      }, 0);
+  });
+
+  return total;
 };
 
-const Traces = ({ traceData }) => {
+const Activity = ({ traceData }) => {
   const activeDays = useActiveDays(traceData);
 
   return (
     <div>
+      <h2 className="text-md font-semibold">Actvity for week</h2>
       <div className="flex gap-2">
         {DAYS_OF_WEEK.map((day) => (
           <div key={day.index} className="flex flex-col items-center">
@@ -68,9 +77,12 @@ const Traces = ({ traceData }) => {
       <p className="text-sm font-medium pt-1">
         Total Activity Duration: {totalActivityDuration(traceData)} mins
       </p>
-      <div>
+      <div className="flex flex-wrap md:max-w-90">
         {ACTIVITY_TYPE.map((type, index) => (
-          <div className="text-sm font-medium pt-1" key={index}>
+          <div
+            className="text-xs font-medium pt-1 pr-2 overflow flex-wrap whitespace-nowrap after:content-[','] last:after:content-none"
+            key={index}
+          >
             {type}: {activityTypeDuration(traceData, type.toLowerCase())} mins
           </div>
         ))}
@@ -79,7 +91,7 @@ const Traces = ({ traceData }) => {
   );
 };
 
-Traces.propTypes = {
+Activity.propTypes = {
   traceData: PropTypes.arrayOf(
     PropTypes.shape({
       date: PropTypes.string.isRequired,
@@ -87,4 +99,4 @@ Traces.propTypes = {
   ).isRequired,
 };
 
-export default Traces;
+export default Activity;

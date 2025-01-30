@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="max-w-5xl mx-auto bg-gray-100">
       <Header></Header>
       <div className="flex flex-col md:flex-row">
         <NavBar></NavBar>

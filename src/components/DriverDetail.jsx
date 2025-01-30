@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
-import Traces from "./Traces";
+import Activity from "./Activity";
 
-const Driver = ({ driverData }) => {
+const DriverDetail = ({ driverData }) => {
   return (
     <div className="flex flex-col md:flex-row md:justify-between items-start">
       <div>
-        <h2 className="text-lg font-semibold">
+        <h2 className="text-md font-semibold">
           {driverData.forename} {driverData.surname}
         </h2>
         <p className="text-sm text-gray-600">
@@ -13,13 +13,13 @@ const Driver = ({ driverData }) => {
         </p>
       </div>
       <div className="mt-4 md:mt-0">
-        <Traces traceData={driverData.traces}></Traces>
+        <Activity traceData={driverData.traces}></Activity>
       </div>
     </div>
   );
 };
 
-Driver.propTypes = {
+DriverDetail.propTypes = {
   driverData: PropTypes.shape({
     driverID: PropTypes.number.isRequired,
     surname: PropTypes.string.isRequired,
@@ -40,4 +40,4 @@ Driver.propTypes = {
   }).isRequired,
 };
 
-export default Driver;
+export default DriverDetail;

@@ -12,7 +12,7 @@ const NavBar = () => {
   };
 
   return (
-    <aside className="w-full md:w-1/4 bg-gray-500 text-white p-4 min-w-40">
+    <aside className="w-full md:w-1/4 bg-gray-500 text-white p-4 min-w-40 md:max-w-60 md:min-h-dvh">
       <div className="flex justify-between items-start">
         <h1 className="text-xl font-bold">Drive Track</h1>
         <button
