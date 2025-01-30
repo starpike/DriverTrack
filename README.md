@@ -4,6 +4,23 @@
 
 **Driver Track** is a React-based web application designed to help fleet managers and businesses monitor and analyze driver activities efficiently. The application displays a comprehensive list of drivers, their vehicle registrations, and the days of the week they worked. Additionally, it provides insights into the total duration of activities for the week and breaks down durations by activity type.
 
+## Installation
+
+### 1. Clone the Repository
+
+Open your terminal and run the following commands:
+
+git clone https://github.com/starpike/drivertrack.git
+cd drivertrack
+
+### 2. Install Dependencies
+
+npm install
+
+### 3. Run the applications
+
+npm start
+
 ## Features
 
 - **Driver List:** View a list of drivers along with their vehicle registration numbers.
